@@ -1,3 +1,36 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+    --color-rust: #683924;
+}
+
+/* Moves the whole container across the screen */
+.moving-container {
+    animation: move-across 5s linear infinite;
+}
+
+/* Spins the inner object on its own axis */
+.rust-img {
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes move-across {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg); /* Negative to match rolling direction */
+    }
+}
