@@ -13,10 +13,16 @@
 
 html,
 body {
+    background-image: url("/images/ferris.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: "National Park", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 @theme {
