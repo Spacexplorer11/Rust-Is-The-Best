@@ -34,8 +34,10 @@
 
 <div class="@container text-center text-rust flex flex-col">
 	<section id="welcome-text">
-		<h1 class="text-5xl">Rust. Is. The. Best.</h1>
-		<div class="moving-container animate-[move_5s_linear_infinite] opacity-50">
+		<h1 class="text-5xl"><span
+			class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">Rust. Is. The. Best.</span>
+		</h1>
+		<div class="moving-container animate-[move_5s_linear_infinite] mb-10">
 			<img
 				src="/images/rust.webp"
 				alt="Rust logo"
@@ -43,24 +45,36 @@
 				class="rust-img my-4 h-[100px] w-[100px] animate-[spin_5s_linear_infinite]"
 			/>
 		</div>
-		<p class="text-3xl">
-			Rust is the best. It just is, trust me. Don't believe me? Try it out! <br />
+		<p class="text-3xl mb-10">
+			<span class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">
+			Rust is the best. It just is, trust me. Don't believe me? Try it out! <br>
+			</span>
+		</p>
+		<p class="text-3xl mb-10">
+			<span class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">
 			You can learn more about Rust
 			<a href="https://www.rust-lang.org/" class="text-blue-500 underline hover:text-blue-600"
 			>here</a
 			>.
+							</span>
 		</p>
 	</section>
-	<section id="100-reasons" class="text-center text-rust flex flex-col">
-		<h2 class="mt-8 text-4xl mb-10">100 Reasons why Rust is the best</h2>
+	<section id="100-reasons" class="text-center text-rust flex flex-col min-w-full">
+		<h2 class="text-4xl mb-10"><span
+			class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">100 Reasons why Rust is the best</span>
+		</h2>
 		{#if reasons.length > 0}
-			<ul class="prose pl-6 text-left text-lg">
+			<ul class="prose pl-6 text-lg mb-10 min-w-full">
 				{#each reasons as reason}
-					<li>{@html reason}</li>
+					<li><span
+						class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">{@html reason}</span>
+					</li>
 				{/each}
 			</ul>
 		{:else}
-			<h2 class="animate-bounce text-4xl">Thinking about the best way to convince you...</h2>
+			<h2 class="animate-bounce text-4xl p-4"><span
+				class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">Thinking about the best way to convince you...</span>
+			</h2>
 		{/if}
 	</section>
 </div>
