@@ -2,6 +2,23 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+
+@font-face {
+    font-family: "National Park";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/NationalPark-ExtraBold.woff2") format("woff2");
+    font-display: swap;
+}
+
+html,
+body {
+    font-family: "National Park", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
 @theme {
     --color-rust: #683924;
 }
