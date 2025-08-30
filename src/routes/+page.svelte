@@ -32,7 +32,7 @@
 	});
 </script>
 
-<div class="@container text-center text-rust flex flex-col">
+<div class="@container text-center text-rust flex mt-20 flex-col">
 	<section id="welcome-text">
 		<h1 class="text-5xl"><span
 			class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">Rust. Is. The. Best.</span>
