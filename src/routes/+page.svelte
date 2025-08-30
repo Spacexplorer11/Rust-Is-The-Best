@@ -78,3 +78,13 @@
 		{/if}
 	</section>
 </div>
+<div style="position: absolute; top: 20px; left: 10px; z-index: 1000;">
+	<iframe src="https://github.com/sponsors/Spacexplorer11/button" title="Sponsor Spacexplorer11" height="32"
+	        width="114" style="border: 0; border-radius: 6px;"></iframe>
+</div>
+<div style="position: absolute; top: 10px; right: 10px; z-index: 1000;">
+	<a href="https://www.buymeacoffee.com/spacexplorer11" target="_blank" style="cursor: pointer;">
+		<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+		     style="height: 60px !important;width: 217px !important;">
+	</a>
+</div>
