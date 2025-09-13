@@ -27,6 +27,6 @@
 	},
 	"dependencies": {
       "@sveltejs/adapter-cloudflare": "^7.1.2",
-      "marked": "^16.1.1"
+      "marked": "^16.2.1"
 	}
 }
