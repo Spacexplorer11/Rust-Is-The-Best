@@ -22,7 +22,7 @@
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.7.1",
 		"svelte": "^5.43.2",
-		"tailwindcss": "^4.1.16",
+		"tailwindcss": "^4.1.17",
 		"vite": "^7.1.12"
 	},
 	"dependencies": {
