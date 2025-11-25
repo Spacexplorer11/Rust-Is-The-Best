@@ -23,7 +23,7 @@
 		"prettier-plugin-tailwindcss": "^0.7.1",
 		"svelte": "^5.43.12",
 		"tailwindcss": "^4.1.17",
-		"vite": "^7.2.2"
+		"vite": "^7.2.4"
 	},
 	"dependencies": {
       "@sveltejs/adapter-cloudflare": "^7.2.4",
