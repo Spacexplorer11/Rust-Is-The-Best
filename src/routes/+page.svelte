@@ -1,6 +1,13 @@
 <script>
 	import { marked } from 'marked';
-	let reasons = [];
+
+	let { data } = $props();
+	let reasons = $derived(data.reasons);
+
+	let reasons_markdown = $derived(reasons
+		.split('\n')
+		.filter((line) => line.length > 0)
+		.map((line) => marked.parse(line)));
 </script>
 
 <div class="@container text-center text-rust flex mt-20 flex-col">
@@ -13,7 +20,7 @@
 				src="/images/rust.webp"
 				alt="Rust logo"
 				title="rust logo"
-				class="rust-img my-4 h-[100px] w-[100px] animate-[spin_5s_linear_infinite]"
+				class="rust-img my-4 h-25 w-25 animate-[spin_5s_linear_infinite]"
 			/>
 		</div>
 		<p class="text-3xl mb-10">
@@ -36,10 +43,14 @@
 		</h2>
 		{#if reasons.length > 0}
 			<ul class="prose pl-6 text-lg mb-10 min-w-full">
-				{#each reasons as reason}
+				{#each reasons_markdown as reason}
+					{#if reason !== '<hr>\n'}
 					<li><span
 						class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">{@html reason}</span>
 					</li>
+					{:else}
+						<hr>
+					{/if}
 				{/each}
 			</ul>
 		{:else}
