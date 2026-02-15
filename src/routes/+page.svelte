@@ -1,35 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
 	import { marked } from 'marked';
-
 	let reasons = [];
-	onMount(async () => {
-		const response = await fetch('https://ai.hackclub.com/chat/completions', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				messages: [
-					{
-						role: 'user',
-						content:
-							'Give me 100 reasons why Rust the language is the best. Do not include starter text such as \'Here are **100 compelling reasons** why **Rust** is considered one of the best programming languages, categorized for clarity and depth:\' as it is unnecessary. Please keep headings and other markdown. Please include as much detail as you possible! It needs to be extremely convincing for even Rust haters. You are allowed to put down other languages, make sure all the reasons are extremely biased towards Rust.'
-					}
-				]
-			})
-		});
-
-		const data = await response.json();
-		let content = data.choices?.[0]?.message?.content ?? '';
-
-		content = content.split('</think>')[1]?.trim() || content;
-
-		reasons = content
-			.split('\n')
-			.filter((line) => line.length > 0)
-			.map((line) => marked.parse(line));
-	});
 </script>
 
 <div class="@container text-center text-rust flex mt-20 flex-col">
