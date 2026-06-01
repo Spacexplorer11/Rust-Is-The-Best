@@ -2,11 +2,9 @@
 	import { marked } from 'marked';
 	import staticReasons from '$lib/reasons.json';
 
-	let reasons_markdown = $derived(
-		staticReasons
-			.filter((line) => line.trim().length > 0)
-			.map((line) => marked.parse(line))
-	);
+	const reasons_markdown = staticReasons
+		.filter((reason) => reason.trim().length > 0)
+		.map((reason) => marked.parseInline(reason));
 </script>
 
 <div class="@container text-center text-rust flex mt-20 flex-col">
