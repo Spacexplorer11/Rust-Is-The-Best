@@ -1,13 +1,12 @@
 <script>
 	import { marked } from 'marked';
+	import staticReasons from '$lib/reasons.json';
 
-	let { data } = $props();
-	let reasons = $derived(data.reasons);
-
-	let reasons_markdown = $derived(reasons
-		.split('\n')
-		.filter((line) => line.length > 0)
-		.map((line) => marked.parse(line)));
+	let reasons_markdown = $derived(
+		staticReasons
+			.filter((line) => line.trim().length > 0)
+			.map((line) => marked.parse(line))
+	);
 </script>
 
 <div class="@container text-center text-rust flex mt-20 flex-col">
@@ -41,7 +40,7 @@
 		<h2 class="text-4xl mb-10"><span
 			class="bg-amber-50/70 rounded-xl inline-block max-w-fit overflow-hidden p-[0.5em] whitespace-normal ">100 Reasons why Rust is the best</span>
 		</h2>
-		{#if reasons.length > 0}
+		{#if reasons_markdown.length > 0}
 			<ul class="prose pl-6 text-lg mb-10 min-w-full">
 				{#each reasons_markdown as reason}
 					{#if reason !== '<hr>\n'}
